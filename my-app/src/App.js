@@ -2,24 +2,36 @@ import logo from './logo.svg';
 import './App.css';
 
 export const App = () => {
-	return (
-		<div className="App">
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				<p>
-					Edit <code>src/App.js</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
-				<span id="spanDate"></span>
-			</header>
-		</div>
+	return document.createElement(
+		'div',
+		{ className: 'App' },
+		document.createElement(
+			'header',
+			{ className: 'App-header' },
+			document.createElement('img', {
+				src: logo,
+				className: 'App-logo',
+				alt: 'logo',
+			}),
+			document.createElement(
+				'p',
+				null,
+				'Edit ',
+				document.createElement('code', null, 'src/App.js'),
+				' and save to reload.',
+			),
+			document.createElement(
+				'a',
+				{
+					className: 'App-link',
+					href: 'https://reactjs.org',
+					target: '_blank',
+					rel: 'noopener noreferrer',
+				},
+				'Learn React',
+			),
+			document.createElement('span', { id: 'spanDate' }),
+		),
 	);
 };
 
